@@ -1,0 +1,44 @@
+.content{
+    background-color: #f7f8f9;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    .videoList{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2%;
+        justify-content: space-between;
+        max-width: 100%;
+        .video{
+            display: block;
+            max-width: 24%;
+            padding-bottom: 2%;
+            @include desktop-below{
+                max-width: 32%;
+            }
+            @include pad{
+                max-width: 32%;
+            }
+            @include mobile{
+                max-width :48%;
+            }
+            a span{
+                @include limit-text-hight(2);
+            }
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+            }
+            .bottom a{
+                display: flex;
+                width: 100%;
+            }
+        }
+        .video .bottom svg path{
+            stroke: rgb(0, 0, 0);
+            stroke-width: 3;
+            fill: rgb(255, 255, 255);
+            &:hover{
+                fill: rgb(217, 27, 27);
+            }
+        }
+    }
+}

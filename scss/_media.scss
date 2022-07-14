@@ -1,0 +1,22 @@
+@mixin desktop-below {
+    @media (max-width: 1023px) {
+        @content
+    }
+}
+@mixin pad {
+    @media (max-width: 768px) {
+        @content
+    }
+}
+@mixin mobile {
+    @media (max-width: 568px) {
+        @content
+    }
+}
+// 限制文字高度
+@mixin limit-text-hight($number){
+    overflow:hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $number;
+}
